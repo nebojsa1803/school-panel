@@ -1,4 +1,4 @@
-import LogoImg from './../../assets/logo/logo.jpg'
+import LogoImg from './../../assets/logo/logo2.jpg'
 const Logo = () => {
   return (
     <div className='stats bg-primary-content shadow text-center  flex items-center justify-center h-full'>
