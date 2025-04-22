@@ -28,7 +28,7 @@ const App = () => {
     (day >= 1 && day <= 5 && hours === 14 && minutes <= 15)
   return (
     <MainLayout>
-      {!isWithinActivePeriod ? (
+      {isWithinActivePeriod ? (
         <ActivePeriod time={time} />
       ) : (
         <NonWorkingTime time={time} />
