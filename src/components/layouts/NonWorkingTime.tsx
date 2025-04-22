@@ -1,5 +1,4 @@
 import Clock from '../pageBlocks/Clock'
-import ControlTeachers from '../pageBlocks/ControlTeachers'
 import CurrentActivity from '../pageBlocks/CurrentActivity'
 import Logo from '../pageBlocks/Logo'
 import RingSchedule from '../pageBlocks/RingSchedule'
