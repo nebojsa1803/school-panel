@@ -51,7 +51,7 @@ function CurrentActivity({ currentTime: initialTime }: CurrentActivityProps) {
         } else if (isInRange(11, 50, 12, 35)) {
           setMessage('У току је пети час.')
         } else if (isInRange(12, 35, 12, 40)) {
-          setMessage('U toku je mali odmor')
+          setMessage('У току је мали одмор')
         } else if (isInRange(12, 40, 13, 25)) {
           setMessage('У току је шести час.')
         } else if (isInRange(13, 25, 13, 30)) {
