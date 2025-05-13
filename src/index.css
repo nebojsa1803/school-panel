@@ -1,5 +1,16 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 @plugin "daisyui" {
-  themes: winter --default;
+  themes: bumblebee --default;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

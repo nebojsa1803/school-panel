@@ -96,7 +96,7 @@ const ControlTeachers = () => {
   }, [currentDayAdjusted])
 
   return (
-    <ul className='list  shadow-md rounded-box p-4 text-center bg-base-200 justify-around overflow-y-auto h-full'>
+    <ul className='list  shadow-md rounded-box p-4 text-center bg-base-100 justify-around overflow-y-auto h-full'>
       <li className='p-4 pb-2  font-semibold text-xl leading-none tracking-tight text-center 2xl:text-4xl 2xl:pb-3'>
         Дежурни наставници
       </li>

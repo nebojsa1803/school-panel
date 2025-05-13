@@ -66,7 +66,7 @@ function CurrentActivity({ currentTime: initialTime }: CurrentActivityProps) {
         ) {
           setMessage('Сада нема наставе.')
         } else {
-          setMessage(null) // Ako nijeday uslov nije ispunjen unutar radnog daya
+          setMessage(null) // Ako nijedan uslov nije ispunjen unutar radnog dana
         }
       } else {
         setMessage('Данас је нерадни дан.') // Vikend
@@ -77,9 +77,9 @@ function CurrentActivity({ currentTime: initialTime }: CurrentActivityProps) {
   }, [initialTime]) // Efekat se ponovo pokreće ako se promeni initialTime
 
   return (
-    <div className='stats rounded-box  shadow-md text-center  flex items-center justify-center h-full bg-secondary-content'>
+    <div className='stats rounded-box  shadow-md text-center  flex items-center justify-center h-full bg-info-content'>
       <div className='stat fieldset flex justify-center items-center '>
-        <div className='fieldset-legend font-bold text-4xl 2xl:text-6xl text-secondary'>
+        <div className='fieldset-legend font-bold text-4xl 2xl:text-6xl text-info'>
           {message}
         </div>
       </div>

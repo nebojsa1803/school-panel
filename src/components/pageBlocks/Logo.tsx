@@ -4,7 +4,7 @@ const Logo = () => {
     <div className='stats bg-primary-content shadow text-center  flex items-center justify-center h-full'>
       <img
         src={LogoImg}
-        alt=''
+        alt='logo'
         className='block w-full h-full object-fit object-center'
       />
     </div>
