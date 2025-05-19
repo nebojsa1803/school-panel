@@ -12,7 +12,8 @@ const SchooldayRingSchedule = () => {
     <div className='rounded-box shadow-md w-full base-200 p-4 text-center overflow-y-auto flex flex-col h-full '>
       <div className='flex w-full justify-center items-center mb-5 '>
         <h1 className='font-semibold text-2xl 2xl:text-4xl leading-none tracking-tight'>
-          Распоред звоњења (30')
+          Распоред звоњења
+          <span className='text-error 2xl:text-3xl 2xl:font-bold'> (30')</span>
         </h1>
       </div>
       {/* Uklonili smo ovaj div, tabela će biti direktni potomak flex kontejnera */}
