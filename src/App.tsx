@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import MainLayout from './components/layouts/MainLayout'
-import ActivePeriod from './components/layouts/ActivePeriod'
-import NonWorkingTime from './components/layouts/NonWorkingTime'
+import StandardWorkingDay from './components/layouts/StandardWorkingDay'
+import SchoolDay from './components/layouts/SchoolDay'
 
 const App = () => {
   const [time, setTime] = useState(new Date())
@@ -17,6 +17,8 @@ const App = () => {
   }, [])
 
   const day = time.getDay() // 0 (Nedelja) do 6 (Subota)
+  const monthDay = time.getDate()
+  const month = time.getMonth()
   const hours = time.getHours()
   const minutes = time.getMinutes()
 
@@ -26,12 +28,28 @@ const App = () => {
       (hours > 7 || (hours === 7 && minutes >= 10)) &&
       hours < 14) ||
     (day >= 1 && day <= 5 && hours === 14 && minutes <= 15)
+
+  const isWithinActiveSchoolDayPeriod =
+    (day >= 1 &&
+      day <= 5 && // Ponedeljak (1) do Petak (5)
+      (hours > 7 || (hours === 7 && minutes >= 25)) &&
+      hours < 12) ||
+    (day >= 1 && day <= 5 && hours === 12 && minutes <= 30)
+
+  const isSchoolDay = monthDay === 20 && month === 4 // 4 = may
+
   return (
     <MainLayout>
-      {isWithinActivePeriod ? (
-        <ActivePeriod time={time} />
+      {isSchoolDay ? (
+        <SchoolDay
+          time={time}
+          isWithinActiveSchoolDayPeriod={isWithinActiveSchoolDayPeriod}
+        />
       ) : (
-        <NonWorkingTime time={time} />
+        <StandardWorkingDay
+          time={time}
+          isWithinActivePeriod={isWithinActivePeriod}
+        />
       )}
     </MainLayout>
   )
